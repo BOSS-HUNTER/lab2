@@ -4,14 +4,21 @@ language: "minimal"
 services:
 - docker
 
+env:
+  - ID='toliak' IMG='bootstrap-cpp'
+
+before_script:
+  - docker pull $ID/$IMG
+  - chmod +x -R ./scripts
+
 jobs:
   include:
   - name: "quality"
     script:
-    - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./scripts/duplication.sh toliak/bootstrap-cpp
+    - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./scripts/duplication.sh $ID/$IMG
   - name: "compile"
     script:
-    - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./scripts/compile.sh toliak/bootstrap-cpp
+    - docker run -t -v $(pwd):/opt/builder/ --entrypoint ./scripts/compile.sh $ID/$IMG
 
 notifications:
     email: false

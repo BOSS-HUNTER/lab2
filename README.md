@@ -1,6 +1,4 @@
-[![Build Status](https://travis-ci.com/Toliak/lab0302.svg?branch=master)](https://travis-ci.com/Toliak/lab0302)
-![Code size](https://img.shields.io/github/languages/code-size/Toliak/lab0302.svg)
-![GitHub Repo size](https://img.shields.io/github/repo-size/Toliak/lab0302.svg)
+[![Build Status](https://travis-ci.org/BOSS-HUNTER/lab2.svg?branch=master)](https://travis-ci.org/BOSS-HUNTER/lab2)
 
 # Лабораторная работа №2
 
